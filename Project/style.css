@@ -1,9 +1,9 @@
 .h1 {
     font-family: Helvetica;
     font-size: 100px;
-    font-weight: bolder;
+    font-weight: bold;
     color: khaki;
     text-align: center;
-    background-image: url('Projects/Dasmotos/pattern.jpeg');
+    background-image: url('Project/pattern.jpeg');
 
 }
