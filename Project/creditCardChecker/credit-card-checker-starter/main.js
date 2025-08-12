@@ -25,10 +25,76 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+function validateCred(arr){
+    const digits = arr.slice();
+    let sum = 0;
+    for (let i = digits.length - 1; i >= 0; i--) {
+        let currDigit = digits[i];
+        if ((digits.length-1 -i)% 2 ===1){
+            currDigit *=2; 
+            if(currDigit >9) {
+                currDigit -=9;
+            }
+        }
+        sum += currDigit;
+    }
+    return sum % 10 === 0;
+}
+
+console.log(validateCred(valid1))
 
 
+function findInvalidCards(nestedArr){
+    const invalidCards = [];
+    for (let card of nestedArr) {
+        if (!validateCred(card)) {
+            invalidCards.push(card);
+        }
+    }
+    return invalidCards;
+}
 
+console.log(findInvalidCards(batch))
 
+/**
+ * Given an array of invalid credit card arrays, returns an array of companies
+ * that issued invalid cards. Ensures each company appears once.
+ * 
+ * @param {Array<Array<number>>} invalidCards - Array of invalid card numbers
+ * @returns {Array<string>} Array of company names
+ */
+function idInvalidCardCompanies(invalidCards) {
+  const companies = [];
+  for (let card of invalidCards) {
+    switch (card[0]) {
+      case 3:
+        if (!companies.includes('Amex (American Express)')) {
+          companies.push('Amex (American Express)');
+        }
+        break;
+      case 4:
+        if (!companies.includes('Visa')) {
+          companies.push('Visa');
+        }
+        break;
+      case 5:
+        if (!companies.includes('Mastercard')) {
+          companies.push('Mastercard');
+        }
+        break;
+      case 6:
+        if (!companies.includes('Discover')) {
+          companies.push('Discover');
+        }
+        break;
+      default:
+        console.log(`Company not found for card starting with digit '${card[0]}':`, card);
+        break;
+    }
+  }
+  return companies;
+}
 
-
-
+// Example usage:
+const invalidCards = findInvalidCards(batch);
+console.log(idInvalidCardCompanies(invalidCards));
