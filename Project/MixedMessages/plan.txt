@@ -1,0 +1,44 @@
+For this project, you will build a message generator program. Every time a user runs a program, they should get a new, randomized output. You’re welcome to take the project in a couple of different forms, like an astrology generator, inspirational message, or nonsensical jokes. To make your program truly random, the message that it outputs should be made up of at least three different pieces of data. Take what you know of JavaScript syntax so far to build the program and customize it to your liking.
+
+Project Objectives:
+
+Build a message generator program using JavaScript
+Use Git version control
+Use command line
+Develop locally on your computer
+Prerequisites:
+JavaScript
+Git and GitHub
+Command line
+
+An 8 ball that has a message for each side that it lands on? 
+3 pieces of data -> structure the output breaking the output into 3 results
+
+"Let me think" + "All signs point to yes" + "hope that helps!" 
+
+8 ball intro:
+- let me think
+- that's interesting
+- well well well
+- oh look who it is 
+- come back for me? 
+- enough with the shaking! 
+
+
+actual 8 ball message: 
+- It is certain.
+- Without a doubt.
+- It is decidedly so.
+- Yes definitely.
+- You may rely on it.
+- As I see it yes.
+- Most likely.
+- Outlook good.
+
+8 ball finish:
+- hope that helps! 
+- now shake to find out more
+- BRB
+- please go away
+- Thanks! 
+- i'm tired
