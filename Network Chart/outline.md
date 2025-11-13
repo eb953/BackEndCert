@@ -1,6 +1,17 @@
 
 Below is a practical plan you can execute to both prepare the data for a Tableau network graph and showcase predictive modeling within the same artifact. It’s organized by phases: data model, transforms/feature engineering, graph metrics, forecasting options, Tableau build, and storytelling.
 
+prompt:
+Help me brainstorm how I can showcase this project. I want to create a network graph showing relation between healthcare providers in tableau. However, I need to prepare my data. I also want to showcase the capabilities of machine learning / predictive modeling. Can you come up with some ways I could show case this in the data preparation phase? I'll be working with healthcare outpatient UM data. I will be looking at authorization data, this contains authno, auth pcp, auth pcp speciality, authorization procedure codes, diagnosis codes, when requested, the decision status (approved, modified, denied, cancelled), requested provider, requested provider specialty. Based off this data, I want to be able to display in the network graph the connections between providers. For example, a provider node size would be bigger because it request to many different providers. I then want to show case the connection line. The more auth to a provider the thicker the line. However, my thought process is I could overlay another connection line, this would be where the prediction analysis could come in that predicts the expected volume of auths next month to be made to said provider. Could you outline how I could do this and also suggest what sort of machine learning algorithms I could deploy when preparing my data
+
+
+
+
+
+
+
+
+
 1) Define the analytic grain and network semantics
 - Network definition:
   - Nodes: providers (PCPs and specialists). Color by specialty; size by activity/centrality.
